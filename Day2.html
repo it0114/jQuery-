@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+    // var arr = [1, 3, 5, 7, 9];
+    // var obj = {
+    //     0: 1,
+    //     1: 3,
+    //     2: 5,
+    //     3: 7,
+    //     4: 9,
+    //     length: 5
+    // };  //伪数组
+
+
+    //利用原生js的map方法遍历
+    // arr.map(function (value, index, array) {
+    //     console.log("index = " + index, "vlaue = " + value, array);
+    // })
+
+    /*
+   第一个参数: 当前遍历到的元素
+   第二个参数: 当前遍历到的索引
+   第三个参数: 当前被遍历的数组
+
+   注意点:和原生的forEach一样不能遍历伪数组
+   * */
+
+    //利用jquery的map方法遍历
+    // $.map(arr,function (value,index) {
+    //     console.log(index, value);
+    // })
+    /*
+    第一个参数: 要遍历的数组
+    第二个参数: 每遍历一个元素之后执行的回调函数
+    回调函数的参数：
+    第一个参数:遍历到的元素
+    第二个参数:遍历到的索引
+
+    注意点:
+    和jQuery中的each静态方法一样，map静态方法也可以遍历伪数组
+    * */
+
+    // $.map(obj, function (value, index) {
+    //     console.log(index, value);
+    // });
+    //
+    // $.each(obj, function (index, value) {
+    //     console.log(index, value);
+    // });
+
+
+    // var a = $.map(obj, function (value, index) {
+    //     return index + value;
+    // });
+    //
+    // var b = $.each(obj, function (index, value) {
+    //     return index + value;
+    // });
+    //
+    // console.log(a);
+    // console.log(b);
+    /*
+    jQuery的each静态方法和map静态方法的区别：
+    each静态方法默认返回值就是遍历谁返回谁
+    map静态方法默认的返回值是一个空数组
+
+    each静态方法不支持在回调函数中对遍历的数组进行处理
+    map静态方法可以在回调函数中通过return对遍历的数组进行处理，然后生成一个新的数组并返回
+    */
+    // jquery中去除空格的方法
+    // var str = "    Yam    "
+    // console.log("---" + str + "----");
+    // //$.trim()会返回去除后的给变量
+    // var res = $.trim(str);
+    // console.log("---" + res + "----");
+
+    /*
+    $.trim();
+    作用:去除字符串两端的空格
+    参数:需要去除空格的字符串
+    返回值:去除空格之后的字符串
+    * */
+
+    // 真数组
+    // var arr = [1,3,5,7,9];
+    // //伪数组
+    // var arrlike = {
+    // 0: 1,
+    //     1: 3,
+    //     2: 5,
+    //     3: 7,
+    //     4: 9,
+    //     length: 5
+    // };
+    // //对象
+    // var obj = {name:"Yam",age:"保密"}
+    // //函数
+    // var fn = function () {}
+    // //window对象
+    // var w = window;
+    //
+    // var res = $.isWindow(w);
+    // console.log(res);
+    /*
+    $.isWindow();
+    作用:判断传入的对象是不是window对象
+    返回值:true/false
+    */
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+        //写法的区别
+        // 原生js的写法
+       //  window.onload = function (ev) {
+       //  }
+       //
+       //  // jquery的写法
+       //  //第一种写法
+       //  $(document).ready(function () {
+       //  })
+       //  //第二种写法
+       //  jQuery(document).ready(function () {
+       //  })
+       //  // 第三种写法
+       //  $(function () {
+       //  })
+       //  // 第四种写法
+       //  jQuery(function () {
+       //  })
+       //
+       //  // jquery和js入口函数的区别
+       //  window.onload = function () {
+       //      //通过原生js的入口函数可以获取到dom元素
+       //      var img = document.getElementsByTagName("img")[0];
+       //      console.log(img);
+       //
+       //      //通过原生js入口函数可以拿到dom元素的宽高
+       //      var width = window.getComputedStyle(img).width;
+       //      console.log(width);
+       //  }
+       //
+       //  $(document).ready(function () {
+       //      //通过jquery入口函数可以拿到dom元素
+       //      var $img = $("img");
+       //      console.log($img);
+       //      //2.通过jquery入口函数不可以拿到dom元素的宽高
+       //      var $width = $img.width();
+       //      console.log($width);
+       //  })
+       //
+       //  /*
+       //  * 总结
+       //  * js的入口函数会等待dom元素完全加载并且图片也完全加载才会执行
+       //  * jquery的入口函数会等待dom元素完全加载但是不会等待图片完全加载就会执行
+       //  * */
+       //
+       //
+       //  // jQuery冲突问题
+       //  //    如果jquery和别的框架一起使用，另外一个框架也用$ ,那么就产生冲突问题的，解决jquery冲突的方案如下
+       //
+       //  //    1.释放$的使用权
+       //  jQuery.noConflict();
+       //
+       //  /*
+       //  2.执行这段代码后$符号就不能被jquery使用了进而代替$符号的是jQuery
+       // */
+       //  jQuery(function () {
+       //      alert("hello yam");
+       //  })
+       //  //释放$的操作必须在编写其他的jquery代码之前写
+       //
+       //  //1.定义一个类
+       //  function AClass() {
+       //
+       //  }
+       //
+       //  //2.给这个类添加一个静态方法
+       //  //直接添加给类的就是静态方法
+       //  AClass.staticMethod = function () {
+       //      alert("staticMethod")
+       //  }
+       //  //静态方法通过类名调用
+       //  AClass.staticMethod();
+       //  //3.给这个类添加一个实例方法
+       //  AClass.prototype.instanceMethod = function () {
+       //      alert("instanceMethod");
+       //  }
+       //  //实例方法通过类的实例调用
+       //  //创建一个实例(创建一个对象)
+       //  var a = new AClass();
+       //  //通过实例调用实例方法
+       //  a.instanceMethod();
+
+        // var obj = {
+        //     0:1,
+        //     1:3,
+        //     2:5,
+        //     3:7,
+        //     4:9,
+        //     length:5 };  //伪数组
+        //
+        // //1.利用jQuery的each静态方法遍历数组
+        // $.each(obj,function (index,value){
+        //     console.log(index,value);
+        // })
+
+
+
+
+    </script>
+</head>
+<body>
+<img src="https://img.alicdn.com/simba/img/TB1RBgjoZfpK1RjSZFOSuu6nFXa.jpg" .>
+</body>
+</html>
