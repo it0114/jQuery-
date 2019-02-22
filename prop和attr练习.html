@@ -10,9 +10,16 @@
             //编写jQuery代码
             //通过jq实现切换图片
 
-            
-            
-
+            // 1.设置点击事件
+            var btn = document.getElementsByTagName("button")[0];
+            btn.onclick = function(){
+                // 2.获取输入框内容
+                var input = document.getElementsByTagName("input")[0];
+                var text = input.value;
+                // 3.修改img的src属性
+               $("img").attr("src",text);//基本大部分情况使用这个
+               // $("img").prop("src",text);
+            }
         })
     </script>
 
@@ -21,9 +28,14 @@
 <body>
 <input type="text">
 <button>点击切换</button>
-<img src="" alt="">
+<br>
+<img src="https://s2.ax1x.com/2019/02/14/kBisMV.png" alt="">
 
-
+<!--测试地址-->
+测试地址
+<p>
+https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=7aa2c00bdd58ccbf1bbcb23c21e3db03/908fa0ec08fa513defeb0567316d55fbb3fbd9c2.jpg
+</p>
 
 </body>
 </html>
