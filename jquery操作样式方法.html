@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            //编写jQuery代码
+            // 1.逐个设置
+            $("div").css("width", "100px");
+            $("div").css("height", "100px");
+            $("div").css("background", "red");
+            // 2.链式设置
+            // 注意点:链式操作如果大于3步，建议分开，不然阅读性会很差
+            $("div").css("width", "100px").css("height", "100px").css("background", "blue")
+            // 3.批量设置(推荐使用)
+            $("div").css({
+                width: "100px",
+                height: "100px",
+                background: "yellow"
+            })
+            // 4.获取css样式值
+            //获取用console.log打印出来
+            console.log($("div").css("background"));
+        })
+    </script>
+</head>
+<body>
+
+<div></div>
+
+</body>
+</html>
