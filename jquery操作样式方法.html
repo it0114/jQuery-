@@ -24,6 +24,13 @@
             //获取用console.log打印出来
             console.log($("div").css("background"));
         })
+
+        //jquery中如果想用-号的属性，例如background-color那么有以下两种写法
+        $("div").css({
+           //backgroundColor: "red", //驼峰命名法
+           //"background-color":"red" //直接把他当字符串使用
+        })
+
     </script>
 </head>
 <body>

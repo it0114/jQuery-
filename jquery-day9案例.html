@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #board.active {
+            color: red;
+        }
+
+        #board {
+            background: #000;
+            display: inline-block;
+            padding: 5px;
+        }
+
+    </style>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            //编写jQuery代码
+
+            var board = $("#board");
+
+            function toggle() {
+                if (board.hasClass("active")) {
+                    board.removeClass("active");
+                }
+                else {
+                    board.addClass("active");
+                }
+            }
+
+            setInterval(toggle, 200);
+
+        })
+    </script>
+</head>
+<body>
+<div id="board">保健用品 二楼左转</div>
+
+</body>
+</html>

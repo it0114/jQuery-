@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+    <script>
+        $(function () {
+            //编写jQuery代码
+            var loaded = false;
+            var trigger = $("#trigger");
+            var card = $("#card");
+            // trigger.on("click", function () {
+            //         ca rd.load("card.html");
+            //         card.toggle();
+            //     }
+            // )
+            trigger.on("click", function () {
+                if (card.is(":visible")) {
+                    card.slideUp();
+                } else {
+                    if (!loaded) {
+                        card.load("card.html");
+                    }
+                    loaded = true;
+                    card.slideDown();
+                }
+            })
+
+        });
+    </script>
+
+</head>
+<body>
+<button id="trigger">服务协议</button>
+<div style="display: none" id="card">
+
+</div>
+
+</body>
+</html>

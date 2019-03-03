@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #card {
+            display: none;
+            background: #eee;
+            padding: 20px;
+            margin: 10px 0;
+        }
+
+        #card.active {
+            background: #555;
+            color: #fff;
+        }
+    </style>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            //编写jQuery代码
+            var card = $("#card");
+            var cardTrigger = $("#card-trigger");
+
+            cardTrigger.on("click", function () {
+
+                if (card.is(":visible")) { //查看是否是显示状态
+                    card.hide();
+                } else {
+                    card.show();
+                }
+            });
+
+            card.on("mouseenter", function () {    //设置鼠标移入
+                card.addClass("active");
+            });
+            card.on("mouseleave", function () {       //设置鼠标移出
+                card.removeClass("active");
+            })
+
+
+        })
+    </script>
+</head>
+<body>
+<button id="card-trigger">
+    显示/隐藏
+</button>
+<div id="card">
+    <h1>公告</h1>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias distinctio dolorem enim facere, itaque
+    nostrum reiciendis rem sit voluptatem. Culpa d olore excepturi fuga nam numquam quaerat quia tenetur ut.
+
+</div>
+</body>
+</html>
